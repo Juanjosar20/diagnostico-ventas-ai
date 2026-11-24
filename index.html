@@ -34,14 +34,14 @@ header{display:flex;justify-content:space-between;align-items:flex-end;border-bo
 .lv .pc{font-family:var(--serif);font-size:42px;text-align:right;font-variant-numeric:tabular-nums}
 .lv.top .num,.lv.top .pc{color:var(--acc)} .lv.top .bar i{background:var(--acc)}
 .dm{margin-top:14px}
-.dm .r{display:grid;grid-template-columns:290px 1fr 70px;align-items:center;gap:18px;margin-top:16px}
+.dm .r{display:grid;grid-template-columns:320px 1fr 70px;align-items:center;gap:18px;margin-top:8px}
 .dm .nm{font-size:24px;font-weight:500}
 .dm .tr{position:relative;height:40px;border-left:1px solid var(--line)}
 .dm .tr .ax{position:absolute;top:0;bottom:0;border-left:1px dashed var(--line)}
 .dm .tr i{position:absolute;left:0;top:9px;height:22px;background:var(--ink);width:0;transition:width 1s cubic-bezier(.22,1,.36,1)}
 .dm .v{font-family:var(--serif);font-size:40px;text-align:right}
 .dm .r.lo .nm,.dm .r.lo .v{color:var(--acc)} .dm .r.lo .tr i{background:var(--acc)}
-.dm .sc{display:grid;grid-template-columns:290px 1fr 70px;gap:18px;margin-top:8px;font-size:15px;color:var(--dim)}
+.dm .sc{display:grid;grid-template-columns:320px 1fr 70px;gap:18px;margin-top:8px;font-size:15px;color:var(--dim)}
 .dm .sc div{display:flex;justify-content:space-between}
 .qr{align-items:center;text-align:center}
 .qr img{width:262px;height:262px;margin:22px 0 14px;image-rendering:pixelated}
@@ -65,18 +65,18 @@ footer{display:flex;justify-content:space-between;font-size:16px;color:var(--dim
 </style></head><body>
 <div id="stage"><div id="p">
 <header>
-  <div><div class="live"><b></b>En vivo · masterclass Ventas con AI</div><div class="tt">¿Qué tan lista está la sala <i>para meter AI</i> en sus ventas?</div></div>
+  <div><div class="live"><b></b>En vivo · masterclass Ventas con AI</div><div class="tt">¿Qué tan lista está la sala <i>para vender con AI</i>?</div></div>
   <div class="cnt"><div class="n" id="n">0</div><div class="l">diagnósticos</div></div>
 </header>
 <div class="g g1">
   <div class="c"><div class="k">Nivel de la sala</div><div class="h" id="hn">Esperando respuestas</div><div id="lv"></div></div>
-  <div class="c"><div class="k">Las 4 dimensiones · promedio de 1 a 4</div><div class="h" id="hd">El eslabón más flojo</div><div class="dm" id="dm"></div></div>
-  <div class="c qr"><div class="k">Haz tu diagnóstico</div><img src="qr.png" alt="QR del diagnóstico"><div class="u">8 preguntas · 2 minutos<br><b style="color:var(--ink)">juanjosar20.github.io/<br>diagnostico-ventas-ai/d</b></div></div>
+  <div class="c"><div class="k">Las 5 dimensiones · promedio de 1 a 4</div><div class="h" id="hd">El eslabón más flojo</div><div class="dm" id="dm"></div></div>
+  <div class="c qr"><div class="k">Haz tu diagnóstico</div><img src="qr.png" alt="QR del diagnóstico"><div class="u">10 preguntas · 2 minutos<br><b style="color:var(--ink)">juanjosar20.github.io/<br>diagnostico-ventas-ai/d</b></div></div>
 </div>
 <div class="g g2">
   <div class="c"><div class="k">AI sin proceso</div><div class="big" id="esl">0 %</div><div class="sub">ya usa AI en ventas, pero <b>sin proceso escrito ni números</b>. Está multiplicando el desorden.</div></div>
   <div class="c"><div class="k">Lo que más les cuesta</div><div class="rk" id="cu"></div></div>
-  <div class="c"><div class="k">¿Su proceso está escrito?</div><div class="st" id="pst"></div><div class="lg" id="plg"></div></div>
+  <div class="c"><div class="k">Si el fundador no vende 2 semanas…</div><div class="st" id="pst"></div><div class="lg" id="plg"></div></div>
 </div>
 <footer><span>Solo se muestran totales de la sala. Nadie ve tu respuesta individual.</span><span id="up"></span></footer>
 </div></div>
@@ -84,7 +84,7 @@ footer{display:flex;justify-content:space-between;font-size:16px;color:var(--dim
 var DATA_URL="data.json";
 var P=document.getElementById('p');
 function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080);P.style.transform='scale('+s+')'}addEventListener('resize',fit);fit();
-var SHADES=['#161513','#6B665E','#C9C2B5','#E4572E'];
+var SHADES=['#E4572E','#161513','#6B665E','#C9C2B5'];
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
 function render(d){
   var n=d.n||0;document.getElementById('n').textContent=n;
@@ -102,7 +102,7 @@ function render(d){
   document.getElementById('esl').textContent=(d.eslabon_pct||0)+' %';
   var cu=(d.cuesta||[]).filter(function(x){return x.pct>0}).slice(0,3);
   document.getElementById('cu').innerHTML=cu.length?cu.map(function(x){return '<div class="r"><span>'+esc(x.texto)+'</span><span class="p">'+x.pct+'%</span></div>'}).join(''):'<div class="r" style="color:var(--dim)"><span>Aparece cuando lleguen respuestas</span><span></span></div>';
-  var q=(d.preguntas||{}).vap01pro,op=q?q.opciones:[];
+  var q=(d.preguntas||{}).vap09fun,op=q?q.opciones:[];
   document.getElementById('pst').innerHTML=op.map(function(o,i){return '<div style="flex:'+(o.pct||0.0001)+';background:'+SHADES[i]+'"></div>'}).join('');
   document.getElementById('plg').innerHTML=op.map(function(o,i){return '<div><i style="background:'+SHADES[i]+'"></i>'+esc(o.texto)+'<b>'+o.pct+'%</b></div>'}).join('');
   if(d.actualizado){var t=new Date(d.actualizado);document.getElementById('up').textContent='Actualizado '+t.toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit'})}
