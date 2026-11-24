@@ -3,7 +3,7 @@
  "niveles": [
   {
    "nivel": 1,
-   "nombre": "Todo en tu cabeza",
+   "nombre": "Todo depende de ti",
    "pct": 0,
    "n": 0
   },
@@ -29,6 +29,11 @@
  "puntaje_promedio": null,
  "dims": [
   {
+   "id": "fun",
+   "nombre": "Dependencia del fundador",
+   "promedio": null
+  },
+  {
    "id": "pro",
    "nombre": "Proceso",
    "promedio": null
@@ -51,6 +56,48 @@
  ],
  "eslabon_pct": 0,
  "preguntas": {
+  "vap09fun": {
+   "pregunta": "Si tú no vendes durante dos semanas, ¿qué pasa con las ventas?",
+   "opciones": [
+    {
+     "texto": "Se detienen",
+     "pct": 0
+    },
+    {
+     "texto": "Bajan mucho",
+     "pct": 0
+    },
+    {
+     "texto": "Bajan un poco",
+     "pct": 0
+    },
+    {
+     "texto": "Siguen igual: alguien más o un sistema vende",
+     "pct": 0
+    }
+   ]
+  },
+  "vap10fun": {
+   "pregunta": "¿Cuántas de tus ventas cierras tú personalmente?",
+   "opciones": [
+    {
+     "texto": "Todas",
+     "pct": 0
+    },
+    {
+     "texto": "La mayoría",
+     "pct": 0
+    },
+    {
+     "texto": "Más o menos la mitad",
+     "pct": 0
+    },
+    {
+     "texto": "Pocas: hay alguien más que cierra",
+     "pct": 0
+    }
+   ]
+  },
   "vap01pro": {
    "pregunta": "¿Tu proceso de ventas está escrito, etapa por etapa?",
    "opciones": [
@@ -279,5 +326,5 @@
    "pct": 0
   }
  ],
- "actualizado": "2026-11-24T12:31:51Z"
+ "actualizado": "2026-11-24T12:44:58Z"
 }
