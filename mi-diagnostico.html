@@ -1,0 +1,58 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu diagnóstico comercial</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F4F1EA;--card:#FBF9F4;--ink:#161513;--mut:#6B665E;--dim:#A39D92;--line:#DDD6C9;--acc:#E4572E}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.w{max-width:760px;margin:0 auto;padding:36px max(18px,env(safe-area-inset-left)) 60px}
+.k{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:46px;line-height:1;margin-top:10px}h1 i{color:var(--acc)}
+.sc{font-size:17px;color:var(--mut);margin-top:10px}.msg{font-size:18px;line-height:1.45;margin-top:16px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px;margin-top:22px}
+.r{display:grid;grid-template-columns:1fr 2fr 40px;gap:12px;align-items:center;margin-top:12px;font-size:15px}
+.tr{height:10px;background:var(--paper);border-radius:2px;overflow:hidden}.tr i{display:block;height:100%;background:var(--ink)}
+.r.lo{color:var(--acc)}.r.lo .tr i{background:var(--acc)}.v{font-family:"Instrument Serif",serif;font-size:24px;text-align:right}
+.esl{border-color:var(--acc);color:var(--acc);font-weight:600}
+pre{white-space:pre-wrap;font:13px/1.5 ui-monospace,Menlo,monospace;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:14px;max-height:260px;overflow:auto;margin-top:12px}
+.b{display:inline-block;margin-top:14px;margin-right:8px;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:12px 20px;font:600 15px Inter,sans-serif;cursor:pointer;text-decoration:none}
+.b.o{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+ol{margin:12px 0 0 20px;font-size:16px;line-height:1.6}
+</style></head><body><div class="w">
+<div class="k">Diagnóstico comercial · ¿tu negocio está listo para AI?</div>
+<h1 id="h"></h1><div class="sc" id="sc"></div><div class="msg" id="msg"></div>
+<div class="c"><div class="k">Tus 5 dimensiones · de 1 a 4</div><div id="dm"></div></div>
+<div class="c"><div class="k">Ahora, tu plan con AI</div>
+<ol><li>Descarga la skill <b>Método: tu proceso de ventas con AI</b>.</li>
+<li>En <b>Claude</b>: Configuración → Capacidades → Skills → subir el .zip. (En ChatGPT: crea un proyecto y pega el texto de la skill en las instrucciones.)</li>
+<li>Abre un chat nuevo y pega tu diagnóstico (botón de abajo). La skill te entrevista, dibuja tu proceso y te dice dónde meter AI primero.</li></ol>
+<a class="b" href="skill/metodo-ventas-con-ai.zip" download>Descargar la skill (.zip)</a><a class="b o" href="skill/metodo-ventas-con-ai/SKILL.md" target="_blank">Ver el texto</a>
+<pre id="txt"></pre><button class="b" id="cp">Copiar mi diagnóstico</button></div>
+</div>
+<script>
+var D={"dims": [["fun", "Dependencia del fundador", "1 · ¿Quién vende en tu negocio?"], ["pro", "Proceso", "2 · Tu proceso"], ["dat", "Números y contexto", "3 · Tus números y tu información"], ["vel", "Velocidad y seguimiento", "4 · Cómo atiendes a tus prospectos"], ["ai", "Uso de AI", "5 · Tu AI hoy"]], "preg": [["vap09fun", "fun", "Si tú no vendes durante dos semanas, ¿qué pasa con las ventas?", ["Se detienen", "Bajan mucho", "Bajan un poco", "Siguen igual: alguien más o un sistema vende"]], ["vap10fun", "fun", "¿Cuántas de tus ventas cierras tú personalmente?", ["Todas", "La mayoría", "Más o menos la mitad", "Pocas: hay alguien más que cierra"]], ["vap01pro", "pro", "¿Tu proceso de ventas está escrito, etapa por etapa?", ["No, está en mi cabeza", "Sé las etapas, pero no están escritas", "Están escritas, pero sin regla para pasar de una a otra", "Escritas, y sé cuándo pasa un cliente a la siguiente"]], ["vap02pro", "pro", "¿Quién es responsable de cada etapa?", ["Yo hago todo", "Varias personas, sin un dueño claro", "Algunas etapas tienen responsable", "Cada etapa tiene un responsable con nombre (persona o herramienta)"]], ["vap03dat", "dat", "¿Qué tanto conoces tus números de ventas?", ["No los mido", "Sé cuánto vendí el mes pasado", "Sé cuántos prospectos, reuniones y ventas tengo", "Los mido cada semana, por etapa, y sé dónde se me caen"]], ["vap04dat", "dat", "Si una AI tuviera que vender por ti mañana, ¿encontraría la información?", ["No: todo está en mi cabeza y en mi WhatsApp", "Hay cosas sueltas: catálogo, precios", "Tengo escrito qué vendo, a quién y a qué precio", "Además tengo objeciones, respuestas y conversaciones con clientes en un solo lugar"]], ["vap05vel", "vel", "Cuando te escribe un cliente posible, ¿en cuánto le respondes?", ["Cuando puedo; a veces al día siguiente", "El mismo día", "En menos de una hora", "En minutos, aunque sea de noche"]], ["vap06vel", "vel", "Si un prospecto deja de contestarte, ¿qué pasa?", ["Se queda ahí", "Le escribo si me acuerdo", "Tengo recordatorios", "Cada prospecto tiene siguiente paso con fecha y lo reviso cada semana"]], ["vap07ai", "ai", "¿Cómo usas hoy la AI en tus ventas?", ["No la uso", "Le pregunto cosas sueltas a ChatGPT", "La uso cada semana para mensajes, propuestas o preparar reuniones", "Tengo algo automatizado que corre solo"]], ["vap08ai", "ai", "¿Sabes si la AI te ha ayudado a vender más?", ["No uso AI en ventas", "No lo sé", "Lo siento, pero no lo he medido", "Sí: comparé un número antes y después"]]], "niv": [[1, "Todo depende de ti", 10, 17, "Tus ventas dependen de ti y de tu memoria. Antes de cualquier AI: escribe tus etapas y empieza a contar tus números."], [2, "Proceso a medias", 18, 25, "Ya vendes con cierto orden, pero falta escribirlo y medirlo. Escribe la regla de tu etapa más repetible."], [3, "Listo para AI", 26, 33, "Tienes proceso y números. Ya puedes darle a la AI una etapa repetible y medir si ayuda."], [4, "AI en el proceso", 34, 40, "La AI ya trabaja dentro de tu proceso y lo mides. El siguiente paso: llevarla a la siguiente etapa."]], "esl": "Usas AI sobre un proceso que no está escrito ni medido: estás multiplicando el desorden. Primero el proceso.", "etapas": [["cero", "Todavía no vendo"], ["primeras", "Tengo mis primeras ventas"], ["mes", "Vendo todos los meses"], ["equipo", "Vendo todos los meses y alguien más vende conmigo"]], "cuesta": [["conseguir", "Conseguir clientes nuevos"], ["responder", "Responder a tiempo"], ["seguimiento", "Dar seguimiento"], ["cerrar", "Cerrar la venta"], ["cobrar", "Cobrar"], ["saber", "Saber qué está funcionando"]]};
+var q=new URLSearchParams(location.search);
+function pt(i,ref,ops){var v=q.get('p'+(i+1))||'';var m=v.match(/_(\d)$/);if(m)return +m[1];var j=ops.findIndex(function(o){return o.toLowerCase()===v.toLowerCase()});return j>=0?j+1:null}
+var pts={},ok=true;D.preg.forEach(function(p,i){var x=pt(i,p[0],p[3]);if(!x)ok=false;pts[p[0]]=x||0});
+var sum={};D.preg.forEach(function(p){sum[p[1]]=(sum[p[1]]||0)+pts[p[0]]});
+var tot=D.preg.reduce(function(a,p){return a+pts[p[0]]},0);
+var lv=D.niv.find(function(n){return tot>=n[2]&&tot<=n[3]})||D.niv[0];
+var esl=lv[0]>=2&&sum.ai>=5&&(sum.pro+sum.dat)<=7;var nivel=esl?D.niv[1]:lv;
+var nm=q.get('nm')||'';
+document.getElementById('h').innerHTML=ok?('Nivel '+nivel[0]+' de 4 · <i>'+nivel[1]+'</i>'):'No encontramos tus respuestas';
+document.getElementById('sc').textContent=ok?(tot+' de 40 puntos'+(nm?' · '+nm:'')):'Vuelve a hacer el diagnóstico desde el link de la clase.';
+document.getElementById('msg').textContent=ok?(esl?D.esl:nivel[4]):'';
+var lo=D.dims.reduce(function(a,d){return sum[d[0]]<sum[a[0]]?d:a});
+document.getElementById('dm').innerHTML=D.dims.map(function(d){var v=sum[d[0]]/2;return '<div class="r'+(d===lo?' lo':'')+'"><div>'+d[1]+'</div><div class="tr"><i style="width:'+(v/4*100)+'%"></i></div><div class="v">'+v.toFixed(1)+'</div></div>'}).join('');
+function lab(list,v){if(!v)return'';var m=v.match(/_(\w+)$/);var f=list.find(function(x){return m&&x[0]===m[1]});return f?f[1]:v}
+var t='MI DIAGNÓSTICO COMERCIAL\n';
+if(q.get('n'))t+='Negocio: '+q.get('n')+'\n';
+t+='Etapa: '+lab(D.etapas,q.get('e'))+'\nLo que más me cuesta: '+lab(D.cuesta,q.get('c'))+'\n';
+t+='Nivel: '+nivel[0]+' de 4 · '+nivel[1]+' ('+tot+' de 40)'+(esl?' · alerta: AI sin proceso':'')+'\n';
+t+='Dimensión más floja: '+lo[1]+'\n\n';
+D.dims.forEach(function(d){t+=d[1]+' ('+(sum[d[0]]/2).toFixed(1)+' de 4)\n';D.preg.forEach(function(p){if(p[1]===d[0])t+='- '+p[2]+' → '+(p[3][pts[p[0]]-1]||'sin respuesta')+'\n'});t+='\n'});
+t+='Usa la skill metodo-ventas-con-ai: dibuja mi proceso y dime dónde meter AI primero.';
+document.getElementById('txt').textContent=t;
+document.getElementById('cp').onclick=function(){var b=this;function done(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar mi diagnóstico'},2000)}
+ if(navigator.clipboard)navigator.clipboard.writeText(t).then(done,function(){sel()});else sel();
+ function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('txt'));var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');done()}catch(e){}}};
+</script></body></html>
