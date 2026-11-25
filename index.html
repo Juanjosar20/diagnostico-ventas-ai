@@ -2,12 +2,12 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Diagnóstico de AI para ventas · en vivo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#F4F1EA;--card:#FBF9F4;--ink:#161513;--mut:#6B665E;--dim:#A39D92;--line:#DDD6C9;--acc:#E4572E;--acc2:#F3C9B9;
---serif:"Instrument Serif",Georgia,serif;--sans:"Inter",system-ui,-apple-system,Arial,sans-serif}
+:root{--paper:rgba(255,255,255,.08);--card:rgba(17,17,17,.72);--ink:#FFFFFF;--mut:#B5B5AA;--dim:#7C7C72;--line:rgba(255,255,255,.12);--acc:#E9FF7B;--acc2:#4b5220;
+--serif:"Inter",system-ui,sans-serif;--sans:"Inter",system-ui,-apple-system,Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);height:100%;overflow:hidden;-webkit-font-smoothing:antialiased}
+html,body{background:linear-gradient(180deg,rgba(10,10,10,.45),rgba(10,10,10,.88) 70%),url(shader-30x.jpg) center top/cover no-repeat fixed,#0A0A0A;color:var(--ink);font-family:var(--sans);height:100%;overflow:hidden;-webkit-font-smoothing:antialiased}
 #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
 #p{width:1920px;height:1080px;flex:none;transform-origin:center;padding:52px 80px 40px;display:flex;flex-direction:column;gap:24px}
 header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.5px solid var(--ink);padding-bottom:18px;flex:none}
@@ -61,6 +61,11 @@ header{display:flex;justify-content:space-between;align-items:flex-end;border-bo
 .lg i{width:16px;height:16px;flex:none;border-radius:2px}
 .lg b{font-family:var(--serif);font-size:30px;font-weight:400;margin-left:auto}
 .empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:34px;color:var(--dim);background:var(--card);border-radius:6px}
+.tt,.cnt .n,.h,.lv .num,.lv .pc,.dm .v,.big,.rk .r .p,.lg b,.empty{font-weight:800;letter-spacing:-.03em}
+.tt{font-size:64px}.tt i,.h i{font-style:normal}
+.c{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:20px}
+.qr img{background:#fff;padding:8px;border-radius:12px}
+.lv.top .bar i{background:var(--acc)}
 footer{display:flex;justify-content:space-between;font-size:16px;color:var(--dim)}
 </style></head><body>
 <div id="stage"><div id="p">
@@ -84,7 +89,7 @@ footer{display:flex;justify-content:space-between;font-size:16px;color:var(--dim
 var DATA_URL="data.json";
 var P=document.getElementById('p');
 function fit(){var s=Math.min(innerWidth/1920,innerHeight/1080);P.style.transform='scale('+s+')'}addEventListener('resize',fit);fit();
-var SHADES=['#E4572E','#161513','#6B665E','#C9C2B5'];
+var SHADES=['#E9FF7B','#FFFFFF','#8C8C82','#4A4A44'];
 function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
 function render(d){
   var n=d.n||0;document.getElementById('n').textContent=n;
