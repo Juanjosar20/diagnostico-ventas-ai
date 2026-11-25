@@ -1,29 +1,29 @@
 {
- "n": 13,
+ "n": 18,
  "niveles": [
   {
    "nivel": 1,
    "nombre": "Todo depende de ti",
-   "pct": 31,
-   "n": 4
+   "pct": 33,
+   "n": 6
   },
   {
    "nivel": 2,
    "nombre": "Proceso a medias",
-   "pct": 39,
+   "pct": 28,
    "n": 5
   },
   {
    "nivel": 3,
    "nombre": "Listo para AI",
-   "pct": 15,
-   "n": 2
+   "pct": 22,
+   "n": 4
   },
   {
    "nivel": 4,
    "nombre": "AI en el proceso",
-   "pct": 15,
-   "n": 2
+   "pct": 17,
+   "n": 3
   }
  ],
  "puntaje_promedio": 23,
@@ -31,37 +31,37 @@
   {
    "id": "fun",
    "nombre": "Dependencia del fundador",
-   "promedio": 2.1,
+   "promedio": 2.2,
    "floja": false,
    "fuerte": false
   },
   {
    "id": "pro",
    "nombre": "Proceso",
-   "promedio": 2.1,
-   "floja": true,
-   "fuerte": false
-  },
-  {
-   "id": "dat",
-   "nombre": "Números y contexto",
-   "promedio": 2.5,
-   "floja": false,
-   "fuerte": false
-  },
-  {
-   "id": "vel",
-   "nombre": "Velocidad y seguimiento",
    "promedio": 2.2,
    "floja": false,
    "fuerte": false
   },
   {
-   "id": "ai",
-   "nombre": "Uso de AI",
+   "id": "dat",
+   "nombre": "Números y contexto",
    "promedio": 2.6,
    "floja": false,
    "fuerte": true
+  },
+  {
+   "id": "vel",
+   "nombre": "Velocidad y seguimiento",
+   "promedio": 2.1,
+   "floja": true,
+   "fuerte": false
+  },
+  {
+   "id": "ai",
+   "nombre": "Uso de AI",
+   "promedio": 2.5,
+   "floja": false,
+   "fuerte": false
   }
  ],
  "eslabon_pct": 0,
@@ -71,19 +71,19 @@
    "opciones": [
     {
      "texto": "Se detienen",
-     "pct": 46
+     "pct": 39
     },
     {
      "texto": "Bajan mucho",
-     "pct": 15
+     "pct": 17
     },
     {
      "texto": "Bajan un poco",
-     "pct": 31
+     "pct": 28
     },
     {
      "texto": "Siguen igual: alguien más o un sistema vende",
-     "pct": 8
+     "pct": 16
     }
    ]
   },
@@ -92,19 +92,19 @@
    "opciones": [
     {
      "texto": "Todas",
-     "pct": 31
+     "pct": 39
     },
     {
      "texto": "La mayoría",
-     "pct": 38
+     "pct": 28
     },
     {
      "texto": "Más o menos la mitad",
-     "pct": 8
+     "pct": 5
     },
     {
      "texto": "Pocas: hay alguien más que cierra",
-     "pct": 23
+     "pct": 28
     }
    ]
   },
@@ -113,11 +113,11 @@
    "opciones": [
     {
      "texto": "No, está en mi cabeza",
-     "pct": 31
+     "pct": 33
     },
     {
      "texto": "Sé las etapas, pero no están escritas",
-     "pct": 46
+     "pct": 39
     },
     {
      "texto": "Están escritas, pero sin regla para pasar de una a otra",
@@ -125,7 +125,7 @@
     },
     {
      "texto": "Escritas, y sé cuándo pasa un cliente a la siguiente",
-     "pct": 23
+     "pct": 28
     }
    ]
   },
@@ -134,19 +134,19 @@
    "opciones": [
     {
      "texto": "Yo hago todo",
-     "pct": 46
+     "pct": 44
     },
     {
      "texto": "Varias personas, sin un dueño claro",
-     "pct": 15
+     "pct": 11
     },
     {
      "texto": "Algunas etapas tienen responsable",
-     "pct": 31
+     "pct": 28
     },
     {
      "texto": "Cada etapa tiene un responsable con nombre (persona o herramienta)",
-     "pct": 8
+     "pct": 17
     }
    ]
   },
@@ -155,19 +155,19 @@
    "opciones": [
     {
      "texto": "No los mido",
-     "pct": 15
+     "pct": 11
     },
     {
      "texto": "Sé cuánto vendí el mes pasado",
-     "pct": 46
+     "pct": 44
     },
     {
      "texto": "Sé cuántos prospectos, reuniones y ventas tengo",
-     "pct": 8
+     "pct": 17
     },
     {
      "texto": "Los mido cada semana, por etapa, y sé dónde se me caen",
-     "pct": 31
+     "pct": 28
     }
    ]
   },
@@ -176,19 +176,19 @@
    "opciones": [
     {
      "texto": "No: todo está en mi cabeza y en mi WhatsApp",
-     "pct": 15
+     "pct": 17
     },
     {
      "texto": "Hay cosas sueltas: catálogo, precios",
-     "pct": 31
+     "pct": 22
     },
     {
      "texto": "Tengo escrito qué vendo, a quién y a qué precio",
-     "pct": 46
+     "pct": 50
     },
     {
      "texto": "Además tengo objeciones, respuestas y conversaciones con clientes en un solo lugar",
-     "pct": 8
+     "pct": 11
     }
    ]
   },
@@ -197,19 +197,19 @@
    "opciones": [
     {
      "texto": "Cuando puedo; a veces al día siguiente",
-     "pct": 16
+     "pct": 22
     },
     {
      "texto": "El mismo día",
-     "pct": 46
+     "pct": 50
     },
     {
      "texto": "En menos de una hora",
-     "pct": 23
+     "pct": 17
     },
     {
      "texto": "En minutos, aunque sea de noche",
-     "pct": 15
+     "pct": 11
     }
    ]
   },
@@ -218,11 +218,11 @@
    "opciones": [
     {
      "texto": "Se queda ahí",
-     "pct": 31
+     "pct": 28
     },
     {
      "texto": "Le escribo si me acuerdo",
-     "pct": 54
+     "pct": 55
     },
     {
      "texto": "Tengo recordatorios",
@@ -230,7 +230,7 @@
     },
     {
      "texto": "Cada prospecto tiene siguiente paso con fecha y lo reviso cada semana",
-     "pct": 15
+     "pct": 17
     }
    ]
   },
@@ -239,19 +239,19 @@
    "opciones": [
     {
      "texto": "No la uso",
-     "pct": 23
+     "pct": 22
     },
     {
      "texto": "Le pregunto cosas sueltas a ChatGPT",
-     "pct": 23
+     "pct": 33
     },
     {
      "texto": "La uso cada semana para mensajes, propuestas o preparar reuniones",
-     "pct": 23
+     "pct": 17
     },
     {
      "texto": "Tengo algo automatizado que corre solo",
-     "pct": 31
+     "pct": 28
     }
    ]
   },
@@ -260,19 +260,19 @@
    "opciones": [
     {
      "texto": "No uso AI en ventas",
-     "pct": 31
+     "pct": 34
     },
     {
      "texto": "No lo sé",
-     "pct": 15
+     "pct": 11
     },
     {
      "texto": "Lo siento, pero no lo he medido",
-     "pct": 23
+     "pct": 22
     },
     {
      "texto": "Sí: comparé un número antes y después",
-     "pct": 31
+     "pct": 33
     }
    ]
   }
@@ -281,27 +281,27 @@
   {
    "id": "conseguir",
    "texto": "Conseguir clientes nuevos",
-   "pct": 54
-  },
-  {
-   "id": "seguimiento",
-   "texto": "Dar seguimiento",
-   "pct": 15
-  },
-  {
-   "id": "saber",
-   "texto": "Saber qué está funcionando",
-   "pct": 15
-  },
-  {
-   "id": "responder",
-   "texto": "Responder a tiempo",
-   "pct": 8
+   "pct": 50
   },
   {
    "id": "cerrar",
    "texto": "Cerrar la venta",
-   "pct": 8
+   "pct": 17
+  },
+  {
+   "id": "saber",
+   "texto": "Saber qué está funcionando",
+   "pct": 17
+  },
+  {
+   "id": "seguimiento",
+   "texto": "Dar seguimiento",
+   "pct": 11
+  },
+  {
+   "id": "responder",
+   "texto": "Responder a tiempo",
+   "pct": 5
   },
   {
    "id": "cobrar",
@@ -318,23 +318,23 @@
   {
    "id": "cero",
    "texto": "Todavía no vendo",
-   "pct": 15
+   "pct": 22
   },
   {
    "id": "primeras",
    "texto": "Tengo mis primeras ventas",
-   "pct": 39
+   "pct": 33
   },
   {
    "id": "mes",
    "texto": "Vendo todos los meses",
-   "pct": 23
+   "pct": 28
   },
   {
    "id": "equipo",
    "texto": "Vendo todos los meses y alguien más vende conmigo",
-   "pct": 23
+   "pct": 17
   }
  ],
- "actualizado": "2026-11-25T00:14:59Z"
+ "actualizado": "2026-11-25T00:15:32Z"
 }
