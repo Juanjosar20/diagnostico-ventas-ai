@@ -1,28 +1,28 @@
 {
- "n": 23,
+ "n": 24,
  "niveles": [
   {
    "nivel": 1,
    "nombre": "Todo depende de ti",
-   "pct": 31,
+   "pct": 29,
    "n": 7
   },
   {
    "nivel": 2,
    "nombre": "Proceso a medias",
-   "pct": 39,
+   "pct": 38,
    "n": 9
   },
   {
    "nivel": 3,
    "nombre": "Listo para AI",
-   "pct": 17,
-   "n": 4
+   "pct": 21,
+   "n": 5
   },
   {
    "nivel": 4,
    "nombre": "AI en el proceso",
-   "pct": 13,
+   "pct": 12,
    "n": 3
   }
  ],
@@ -71,7 +71,7 @@
    "opciones": [
     {
      "texto": "Se detienen",
-     "pct": 39
+     "pct": 38
     },
     {
      "texto": "Bajan mucho",
@@ -79,11 +79,11 @@
     },
     {
      "texto": "Bajan un poco",
-     "pct": 31
+     "pct": 33
     },
     {
      "texto": "Siguen igual: alguien más o un sistema vende",
-     "pct": 13
+     "pct": 12
     }
    ]
   },
@@ -92,11 +92,11 @@
    "opciones": [
     {
      "texto": "Todas",
-     "pct": 35
+     "pct": 34
     },
     {
      "texto": "La mayoría",
-     "pct": 31
+     "pct": 33
     },
     {
      "texto": "Más o menos la mitad",
@@ -104,7 +104,7 @@
     },
     {
      "texto": "Pocas: hay alguien más que cierra",
-     "pct": 30
+     "pct": 29
     }
    ]
   },
@@ -113,19 +113,19 @@
    "opciones": [
     {
      "texto": "No, está en mi cabeza",
-     "pct": 35
+     "pct": 33
     },
     {
      "texto": "Sé las etapas, pero no están escritas",
-     "pct": 35
+     "pct": 33
     },
     {
      "texto": "Están escritas, pero sin regla para pasar de una a otra",
-     "pct": 8
+     "pct": 13
     },
     {
      "texto": "Escritas, y sé cuándo pasa un cliente a la siguiente",
-     "pct": 22
+     "pct": 21
     }
    ]
   },
@@ -134,7 +134,7 @@
    "opciones": [
     {
      "texto": "Yo hago todo",
-     "pct": 48
+     "pct": 46
     },
     {
      "texto": "Varias personas, sin un dueño claro",
@@ -142,11 +142,11 @@
     },
     {
      "texto": "Algunas etapas tienen responsable",
-     "pct": 22
+     "pct": 21
     },
     {
      "texto": "Cada etapa tiene un responsable con nombre (persona o herramienta)",
-     "pct": 13
+     "pct": 16
     }
    ]
   },
@@ -155,19 +155,19 @@
    "opciones": [
     {
      "texto": "No los mido",
-     "pct": 9
+     "pct": 8
     },
     {
      "texto": "Sé cuánto vendí el mes pasado",
-     "pct": 39
+     "pct": 38
     },
     {
      "texto": "Sé cuántos prospectos, reuniones y ventas tengo",
-     "pct": 26
+     "pct": 29
     },
     {
      "texto": "Los mido cada semana, por etapa, y sé dónde se me caen",
-     "pct": 26
+     "pct": 25
     }
    ]
   },
@@ -176,19 +176,19 @@
    "opciones": [
     {
      "texto": "No: todo está en mi cabeza y en mi WhatsApp",
-     "pct": 22
+     "pct": 21
     },
     {
      "texto": "Hay cosas sueltas: catálogo, precios",
-     "pct": 26
+     "pct": 25
     },
     {
      "texto": "Tengo escrito qué vendo, a quién y a qué precio",
-     "pct": 39
+     "pct": 42
     },
     {
      "texto": "Además tengo objeciones, respuestas y conversaciones con clientes en un solo lugar",
-     "pct": 13
+     "pct": 12
     }
    ]
   },
@@ -201,15 +201,15 @@
     },
     {
      "texto": "El mismo día",
-     "pct": 48
+     "pct": 50
     },
     {
      "texto": "En menos de una hora",
-     "pct": 26
+     "pct": 25
     },
     {
      "texto": "En minutos, aunque sea de noche",
-     "pct": 9
+     "pct": 8
     }
    ]
   },
@@ -218,19 +218,19 @@
    "opciones": [
     {
      "texto": "Se queda ahí",
-     "pct": 30
+     "pct": 29
     },
     {
      "texto": "Le escribo si me acuerdo",
-     "pct": 48
+     "pct": 46
     },
     {
      "texto": "Tengo recordatorios",
-     "pct": 9
+     "pct": 13
     },
     {
      "texto": "Cada prospecto tiene siguiente paso con fecha y lo reviso cada semana",
-     "pct": 13
+     "pct": 12
     }
    ]
   },
@@ -239,11 +239,11 @@
    "opciones": [
     {
      "texto": "No la uso",
-     "pct": 22
+     "pct": 21
     },
     {
      "texto": "Le pregunto cosas sueltas a ChatGPT",
-     "pct": 39
+     "pct": 41
     },
     {
      "texto": "La uso cada semana para mensajes, propuestas o preparar reuniones",
@@ -251,7 +251,7 @@
     },
     {
      "texto": "Tengo algo automatizado que corre solo",
-     "pct": 22
+     "pct": 21
     }
    ]
   },
@@ -260,19 +260,19 @@
    "opciones": [
     {
      "texto": "No uso AI en ventas",
-     "pct": 39
+     "pct": 37
     },
     {
      "texto": "No lo sé",
-     "pct": 13
+     "pct": 17
     },
     {
      "texto": "Lo siento, pero no lo he medido",
-     "pct": 22
+     "pct": 21
     },
     {
      "texto": "Sí: comparé un número antes y después",
-     "pct": 26
+     "pct": 25
     }
    ]
   }
@@ -281,7 +281,12 @@
   {
    "id": "conseguir",
    "texto": "Conseguir clientes nuevos",
-   "pct": 57
+   "pct": 54
+  },
+  {
+   "id": "seguimiento",
+   "texto": "Dar seguimiento",
+   "pct": 13
   },
   {
    "id": "cerrar",
@@ -291,12 +296,7 @@
   {
    "id": "saber",
    "texto": "Saber qué está funcionando",
-   "pct": 13
-  },
-  {
-   "id": "seguimiento",
-   "texto": "Dar seguimiento",
-   "pct": 9
+   "pct": 12
   },
   {
    "id": "responder",
@@ -323,12 +323,12 @@
   {
    "id": "primeras",
    "texto": "Tengo mis primeras ventas",
-   "pct": 31
+   "pct": 29
   },
   {
    "id": "mes",
    "texto": "Vendo todos los meses",
-   "pct": 35
+   "pct": 37
   },
   {
    "id": "equipo",
@@ -336,5 +336,5 @@
    "pct": 17
   }
  ],
- "actualizado": "2026-11-25T00:47:28Z"
+ "actualizado": "2026-11-25T00:48:32Z"
 }
